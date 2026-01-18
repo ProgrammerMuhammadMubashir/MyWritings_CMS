@@ -1,0 +1,149 @@
+/* Not found */
+:root{
+  --maindarkbg: rgb(16, 17, 20);
+  --mainlightbg: rgb(238, 235, 228);
+
+  --bg-dark: rgb(16, 17, 20);
+  --bg-light: rgb(238, 235, 228);
+
+  --surface: #131417;
+  --surface-2: #1a1c21;
+  --surface-3: #22252b;
+  --border: #2f323a;
+
+  --text-on-dark: #f8f7f4;
+  --text-primary: #fcfcfa;
+  --text-muted: #a6a6af;
+  --text-muted-2: #c2c2c9;
+  --text-muted-3: #dddddf;
+  --text-on-primary: #121212;
+  --muted-dark: #757985;
+  --muted-4: #eceae4;
+
+  --primary: #d4b062;
+  --primary-variant: #efd48a;
+  --primary-rgba: rgba(212, 176, 98, 0.32);
+  --primary-shadow: rgba(212, 176, 98, 0.45);
+  --primary-shadow-strong: rgba(212, 176, 98, 0.7);
+  --primary-link: rgba(212, 176, 98, 0.9);
+
+  --cyan: #d4b062;
+  --cyan-variant: #b89a52;
+  --cyan-shadow: rgba(212, 176, 98, 0.35);
+
+  --accent-blue: #d4b062;
+  --accent-blue-15: rgba(212, 176, 98, 0.15);
+  --accent-blue-40: rgba(212, 176, 98, 0.4);
+  --accent-blue-70: rgba(212, 176, 98, 0.7);
+
+  --category-text: var(--text-on-dark);
+  --category-border: var(--accent-blue);
+  --category-shadow: var(--accent-blue-15);
+
+  --header-grad: linear-gradient(45deg, #101114, #2b2f36);
+  --card-image-grad: linear-gradient(135deg, #1b1e23 0%, #343842 100%);
+
+  --box-shadow-dark: rgba(0, 0, 0, 0.45);
+  --box-shadow-dark-strong: rgba(0, 0, 0, 0.7);
+}
+
+
+body{
+    background-color: var(--maindarkbg);
+    overflow-x: hidden;
+}
+.pageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    font-family: sans-serif;
+    overflow: hidden;
+
+}
+
+.contentBox {
+    max-width: 100%;
+
+}
+
+/* Error Code Styling (404) */
+.mainCode {
+    font-size: 10rem;
+    font-weight: 900;
+    margin: 0;
+    line-height: 1;
+    letter-spacing: -5px;
+    text-shadow: 0 0 20px var(--primary-rgba);
+    color:var(--mainlightbg);
+}
+
+/* Blue Accent on the '0' */
+.accent {
+    /* Stunning blue gradient */
+    background: linear-gradient(45deg, var(--primary), var(--primary-variant)); 
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Heading and Message */
+.mainHeading {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.messageText {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-muted-2); 
+    margin-bottom: 40px;
+}
+
+/* Home Button Styling */
+.actionButton {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px; 
+    
+    /* Blue gradient background */
+    background: linear-gradient(90deg, var(--primary), var(--primary-variant));
+    color: var(--text-on-primary);
+    
+    box-shadow: 0 5px 20px var(--primary-shadow); 
+    transition: all 0.3s ease;
+}
+
+.actionButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px var(--primary-shadow-strong);
+    opacity: 0.9
+}
+.Link{
+color: var(--primary-link);
+text-decoration:none;
+}
+
+/*header*/
+
+.UL{
+    display:flex;
+ gap:100px;
+}
+.UL li{
+    list-style-type:none;
+}
+.headerLI{
+    text-decoration:none;
+    color:var(--text-muted);
+}
+.headerLI:hover{
+    color:var(--text-on-dark);
+}

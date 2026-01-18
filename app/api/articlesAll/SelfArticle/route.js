@@ -1,0 +1,17 @@
+import { NextResponse } from "next/server";
+import { collectionArticles } from "@/app/(site)/actions/setup";
+
+
+
+export async function POST(request) {
+  const data = await request.json(); 
+  
+  let title=data.title
+  title=title.split('-').map(word => word.toUpperCase() ).join(' ');
+ const article=await collectionArticles.findOne({title:title})
+console.log(`This is your data : ${article}`)
+  return NextResponse.json(article)
+
+}
+
+

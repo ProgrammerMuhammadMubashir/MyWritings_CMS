@@ -1,0 +1,156 @@
+/* MAIN LAYOUT */
+.main {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: var(--text-on-dark);
+  background-color: var(--bg-dark);
+}
+
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: var(--accent-blue);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #aaa;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* MISSION SECTION */
+.mission {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.missionCard {
+  background-color: #111;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 300px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.missionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px var(--accent-blue-70);
+}
+
+.missionCard h2 {
+  color: var(--accent-blue);
+  margin-bottom: 1rem;
+} 
+
+/* TEAM SECTION */
+.teamSection {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionHeading {
+  font-size: 2rem;
+  color: var(--accent-blue);
+  margin-bottom: 2rem;
+}
+
+.teamGrid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-items: center;
+}
+
+.teamCard {
+  background-color: var(--surface);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 250px;
+  box-shadow: 0 10px 25px var(--box-shadow-dark);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teamCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px var(--box-shadow-dark-strong);
+}
+
+.teamAvatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0 auto 1rem auto;
+  cursor: pointer;
+} 
+
+.teamName {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 0.2rem;
+}
+
+.teamRole {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.teamBio {
+  font-size: 0.85rem;
+  color: #ccc;
+  line-height: 1.4;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--surface);
+  color: var(--accent-blue);
+  border: 2px solid var(--accent-blue);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin:1rem 1rem;
+}
+
+.backButton:hover {
+  background-color: var(--accent-blue);
+  color: var(--text-on-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--accent-blue-40);
+} 
+
+.arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.backButton:hover .arrow {
+  transform: translateX(-3px);
+}
