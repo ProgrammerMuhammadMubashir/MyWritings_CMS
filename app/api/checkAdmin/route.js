@@ -8,7 +8,7 @@ export async function POST(request) {
   const data = await request.json();
 let [username,password]=data
    if(username===process.env.ADMIN_NAME && password===process.env.ADMIN_PASSWORD){
-     admin=true;
+ 
    const token= jwt.sign(
       {username:username},
       process.env.SECRET,

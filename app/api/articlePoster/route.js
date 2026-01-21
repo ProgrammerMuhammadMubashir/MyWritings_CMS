@@ -11,7 +11,7 @@ title=title.toLowerCase().split('').map(word => {
             if (word.length === 0) return '';
             return word.charAt(0).toUpperCase() + word.slice(1);
         }) .join('');
-console.log(slug,title)
+
 let dataToBePosted= new collectionArticles(
     {title:title,slug:slug,category:cata,author:author,publish_date:publish_date,tags:tags,content:content,comments:[{},{},{}]}
 )

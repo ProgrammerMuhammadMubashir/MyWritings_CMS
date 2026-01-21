@@ -1,10 +1,10 @@
 "use server"
 import { NextResponse } from "next/server"
 import mongoose from "mongoose"
-const MONGODB_URI = 'mongodb://127.0.0.1:27017/CMS';
+
 const connectDB = async () => {
   try {
-    await mongoose.connect(MONGODB_URI);
+    await mongoose.connect(process.env.URL);
     console.log('✅ MongoDB connected successfully to local database.');
   } catch (error) {
     console.error('❌ MongoDB connection error:', error.message);

@@ -61,8 +61,10 @@ npm install
 Create a `.env.local` file in the root directory:
 
 ```env
-MONGODB_URI=your_database_url
-JWT_SECRET=your_secret_key
+ADMIN_NAME=""
+ADMIN_PASSWORD=""
+SECRET=
+URL=""
 ```
 
 ### 4. Run the development server
