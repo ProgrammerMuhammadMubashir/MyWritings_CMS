@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { collectionArticles } from "../../(site)/actions/setup";
-import connectDB from "@/app/(site)/actions/setup"
+import { connectDB } from "@/app/(site)/actions/setup";
 
 
 export async function POST(request) {

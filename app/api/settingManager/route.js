@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import { collectionSetting } from "@/app/(site)/actions/setup";
 
-import connectDB from "@/app/(site)/actions/setup"
+import { connectDB } from "@/app/(site)/actions/setup";
+
 
 export async function PUT(request) {
   await connectDB()
