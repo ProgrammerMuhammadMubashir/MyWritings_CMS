@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import { collectionSetting } from "@/app/(site)/actions/setup";
 
-
+import connectDB from "@/app/(site)/actions/setup"
 
 export async function PUT(request) {
+  await connectDB()
   const data = await request.json(); 
 let doctoUpdate=collectionSetting.findOne({})
 await collectionSetting.updateOne(doctoUpdate,data)
