@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
 import { connectDB } from "@/app/(site)/actions/setup";
 
+export const runtime = "nodejs";
 
 
 export async function POST(request) {

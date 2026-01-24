@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { collectionSetting } from "@/app/(site)/actions/setup";
 
 import { connectDB } from "@/app/(site)/actions/setup";
+export const runtime = "nodejs";
 
 
 export async function PUT(request) {

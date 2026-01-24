@@ -4,6 +4,7 @@ import { connectDB } from "@/app/(site)/actions/setup";
 
 
 
+export const runtime = "nodejs";
 
 
 export async function POST(request) {

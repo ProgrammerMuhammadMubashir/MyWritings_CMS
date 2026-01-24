@@ -3,6 +3,7 @@ import { collectionArticles } from "@/app/(site)/actions/setup";
 import { collectionStats } from "@/app/(site)/actions/setup";
 import { connectDB } from "@/app/(site)/actions/setup";
 
+export const runtime = "nodejs";
 
 
 
