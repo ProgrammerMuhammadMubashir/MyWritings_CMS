@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { collectionArticles } from "@/app/(site)/actions/setup";
-import connectDB from "@/app/(site)/actions/setup"
+import { connectDB } from "@/app/(site)/actions/setup";
+
 
 
 
