@@ -5,7 +5,7 @@ export default async function Page({ params }) {
     let data;
   try{
     let body={slug:slug}
-    const res =await fetch(`/api/articlePoster/Updater`, {
+    const res =await fetch(`http://localhost:3000/api/articlePoster/Updater`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

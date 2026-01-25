@@ -23,7 +23,7 @@ input.value="";
 })
 let data;
 try{
-      const res=await fetch(`/api/checkAdmin`, {
+      const res=await fetch(`http://localhost:3000/api/checkAdmin`, {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json',
