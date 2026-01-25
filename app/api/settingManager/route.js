@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { collectionSetting } from "@/app/(site)/actions/setup";
+import { collectionSetting } from "@/app/(site)/lib/setup";
 
-import { connectDB } from "@/app/(site)/actions/setup";
+import { connectDB } from "@/app/(site)/lib/setup";
 export const runtime = "nodejs";
 
 

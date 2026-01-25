@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { collectionArticles } from "../../(site)/actions/setup";
-import { connectDB } from "@/app/(site)/actions/setup";
+import { collectionArticles } from "../../(site)/lib/setup";
+import { connectDB } from "@/app/(site)/lib/setup";
 
 export const runtime = "nodejs";
 

@@ -1,21 +1,40 @@
 import mongoose from "mongoose";
 
-let isConnected = false;
+// Use a global variable to store the connection state
+let cached = global.mongoose;
+
+if (!cached) {
+  cached = global.mongoose = { conn: null, promise: null };
+}
 
 export const connectDB = async () => {
-  if (isConnected) return;
+  // 1. If we have an existing connection, use it
+  if (cached.conn) return cached.conn;
 
-  try {
-    await mongoose.connect(process.env.DB_URL, {
+  // 2. If we aren't connecting yet, start the process
+  if (!cached.promise) {
+    const opts = {
       bufferCommands: false,
+    };
+
+    cached.promise = mongoose.connect(process.env.DB_URL, opts).then((mongoose) => {
+      console.log("✅ MongoDB connected");
+      return mongoose;
     });
-    isConnected = true;
-    console.log("✅ MongoDB connected");
-  } catch (error) {
-    console.error("❌ MongoDB connection error:", error);
-    throw error;
   }
+
+  // 3. Wait for the promise and cache the connection
+  try {
+    cached.conn = await cached.promise;
+  } catch (e) {
+    cached.promise = null;
+    throw e;
+  }
+
+  return cached.conn;
 };
+
+// ... keep your Schemas and Models below ...
 
 const commentSchema = new mongoose.Schema({
   commenter: String,
