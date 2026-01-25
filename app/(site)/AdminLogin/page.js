@@ -6,6 +6,9 @@ import { notFound, useRouter } from "next/navigation";
 import ThemeAndFont from "@/components/ThemeAndFont"
 export default function AdminLogin() {
 
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
+
+
   
  let router=useRouter()
     let adminHandler=async(e)=>{
@@ -23,7 +26,7 @@ input.value="";
 })
 let data;
 try{
-      const res=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/checkAdmin`, {
+      const res=await fetch(`${BASE_URL}/api/checkAdmin`, {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json',

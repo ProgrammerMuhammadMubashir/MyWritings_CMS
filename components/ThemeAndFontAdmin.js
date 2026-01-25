@@ -1,7 +1,10 @@
 "use client"
 
 const ThemeAndFontAdmin = async () => {
-  const res = await fetch(`http://localhost:3000/api/settingManager`, {
+  
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
+
+  const res = await fetch(`${BASE_URL}/api/settingManager`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ msg: "Send data" }),

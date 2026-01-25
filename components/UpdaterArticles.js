@@ -8,6 +8,8 @@ const UpdaterArticles = ({data}) => {
 
 let d=Array.from(e.target)
 
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
+
 
 let dataToBeSent=[]
 d.forEach((input)=>{
@@ -19,7 +21,7 @@ input.value="";
 dataToBeSent.push(data.slug)
 console.log(dataToBeSent)
 try{
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/articlePoster/Updater`, {
+    const res = await fetch(`${BASE_URL}/api/articlePoster/Updater`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(dataToBeSent),

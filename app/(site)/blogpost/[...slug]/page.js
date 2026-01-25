@@ -5,6 +5,8 @@ import ArticlesPresenter from "@/components/ArticlesPresenter"
 import SelfArticle from "@/components/SelfArticle" 
 import ArticlePresenter_Self from "@/components/ArticlePresenter_Self";
 
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
+
 export default async function Page({ params }) {
   let data;
 
@@ -13,7 +15,7 @@ export default async function Page({ params }) {
      console.log(slug.length,slug)
     if(slug.length===1){
   let userData={cata:slug[0]}
-const res =await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/articlesAll`, {
+const res =await fetch(`${BASE_URL}/api/articlesAll`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -30,7 +32,7 @@ console.log("RAW RESPONSE:", data);
 else if(slug.length===2){
   let userData={title:slug[1]}
 
-const res =await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/articlesAll/SelfArticle`, {
+const res =await fetch(`${BASE_URL}/api/articlesAll/SelfArticle`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

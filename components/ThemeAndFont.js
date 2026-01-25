@@ -2,7 +2,9 @@
 "use client"
 const ThemeAndFont =async () => {
  
-   const res=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/settingManager`, {
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
+
+   const res=await fetch(`${BASE_URL}/api/settingManager`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
