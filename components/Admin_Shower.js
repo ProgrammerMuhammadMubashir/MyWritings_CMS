@@ -67,7 +67,7 @@ setStats(data)
 const handleDeletion=async(title)=>{
 let z=confirm("Do you really want to delete article (It can't be undone)")
 if(z){
-  const res =await fetch(`http://localhost:3000/api/articlesAll/CRUD`, {
+  const res =await fetch(`/api/articlesAll/CRUD`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',

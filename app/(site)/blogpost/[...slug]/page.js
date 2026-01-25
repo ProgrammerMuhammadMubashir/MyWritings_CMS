@@ -13,7 +13,7 @@ export default async function Page({ params }) {
      console.log(slug.length,slug)
     if(slug.length===1){
   let userData={cata:slug[0]}
-const res =await fetch(`http://localhost:3000/api/articlesAll`, {
+const res =await fetch(`/api/articlesAll`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ console.log("RAW RESPONSE:", data);
 else if(slug.length===2){
   let userData={title:slug[1]}
 
-const res =await fetch(`http://localhost:3000/api/articlesAll/SelfArticle`, {
+const res =await fetch(`/api/articlesAll/SelfArticle`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
