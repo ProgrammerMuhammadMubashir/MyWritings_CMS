@@ -67,7 +67,7 @@ setStats(data)
 const handleDeletion=async(title)=>{
 let z=confirm("Do you really want to delete article (It can't be undone)")
 if(z){
-  const res =await fetch(`http://localhost:3000/api/articlesAll/CRUD`, {
+  const res =await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/articlesAll/CRUD`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ input.value="";
 
 console.log(dataToBeSent)
 try{
-    const res = await fetch("/api/articlePoster", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/articlePoster`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(dataToBeSent),
@@ -138,7 +138,7 @@ try{
  const application=async()=>{
  let activespChipTheme=document.querySelector(".activespChipTheme")
 
-  const res =await fetch(`http://localhost:3000/api/settingManager`, {
+  const res =await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/settingManager`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

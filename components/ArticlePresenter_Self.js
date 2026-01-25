@@ -21,7 +21,7 @@ console.log(e.target[0].value)
 let userName=prompt("Enter your name")
 if(userName!==""){
 const comment={commenter:userName,comment:e.target[0].value,createdAt:Date.now()}
-const res=await fetch(`http://localhost:3000/api/articlePoster/commentUpdater`, {
+const res=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/articlePoster/commentUpdater`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

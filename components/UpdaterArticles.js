@@ -19,7 +19,7 @@ input.value="";
 dataToBeSent.push(data.slug)
 console.log(dataToBeSent)
 try{
-    const res = await fetch("/api/articlePoster/Updater", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/articlePoster/Updater`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(dataToBeSent),
