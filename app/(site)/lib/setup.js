@@ -16,9 +16,8 @@ export const connectDB = async () => {
     const opts = {
       bufferCommands: false,
     };
-    const MONGODB_URI = process.env.MONGODB_URI || process.env.MONGODB_URL || process.env.ATLAS_URI || process.env.DB_URL
 
-    cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {
+    cached.promise = mongoose.connect(process.env.DB_URL, opts).then((mongoose) => {
       console.log("✅ MongoDB connected");
       return mongoose;
     });

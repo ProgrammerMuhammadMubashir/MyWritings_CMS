@@ -2,12 +2,12 @@
 import { NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
 import { connectDB } from "@/app/(site)/lib/setup";
-await connectDB();
 
 export const runtime = "nodejs";
 
 
 export async function POST(request) {
+await connectDB();
   const data = await request.json();
 let [username,password]=data
    if(username===process.env.ADMIN_NAME && password===process.env.ADMIN_PASSWORD){
