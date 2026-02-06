@@ -1043,6 +1043,7 @@ text-decoration:none;
   .sidebar{
     width: 100%;
     height: 10vh;
+    padding: 3vh;
 
   
     flex-direction: row;
@@ -1056,7 +1057,12 @@ text-decoration:none;
     display: flex;
     flex-direction: row;
 justify-content: space-evenly;
+padding-right:2vh ;
+padding-left:2vh ;
 
+  }
+  .sidebarNav ul li{
+    width: 80%;
   }
   .dashWrap{
     width: 100%;

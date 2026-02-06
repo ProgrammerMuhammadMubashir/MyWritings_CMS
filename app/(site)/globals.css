@@ -757,6 +757,17 @@ text-decoration:none;
   .arx-comments-title {
     font-size: 20px;
   }
+  .header{
+    padding: 2vh;
+    
+  }
+  .footer{
+    font-size:0.7rem ;
+  }
+  .login-container{
+width: 90%;
+margin: 3vh;
+  }
 }
 
 
@@ -775,8 +786,8 @@ text-decoration:none;
   padding: 40px;
   border-radius: 12px;
   box-shadow: 0 4px 20px var(--box-shadow-dark);
-  width: 100%;
-  max-width: 400px;
+  width: 40%;
+
   text-align: center;
   animation: shadow 3s infinite alternate;
 
