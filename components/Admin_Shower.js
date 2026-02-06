@@ -40,7 +40,7 @@ setSearch(art)
 }
 f()
 const stats=async()=>{
-const res =await fetch(`http://localhost:3000/api/statsManager`, {
+const res =await fetch(`${BASE_URL}/api/statsManager`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
