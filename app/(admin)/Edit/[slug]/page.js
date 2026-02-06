@@ -5,7 +5,10 @@ export default async function Page({ params }) {
     let data;
   try{
     let body={slug:slug}
-    const res =await fetch(`http://localhost:3000/api/articlePoster/Updater`, {
+    const BASE_URL = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : "http://localhost:3000";
+    const res =await fetch(`${BASE_URL}/api/articlePoster/Updater`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

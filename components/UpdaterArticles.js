@@ -7,9 +7,7 @@ const UpdaterArticles = ({data}) => {
      e.preventDefault();
 
 let d=Array.from(e.target)
-
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
-
+const BASE_URL =process.env.NEXT_PUBLIC_API_URL || ""
 
 let dataToBeSent=[]
 d.forEach((input)=>{
