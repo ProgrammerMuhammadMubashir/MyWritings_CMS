@@ -267,7 +267,7 @@ color: var(--text);
   background-color: var(--surface);
   padding: 3rem;
   border-radius: 15px;
-  max-width: 700px;
+  width: 80%;
   margin: 0 auto;
   box-shadow: 0 10px 30px var(--box-shadow-dark);
 } 
@@ -1061,11 +1061,15 @@ padding-right:2vh ;
 padding-left:2vh ;
 
   }
-  .sidebarNav ul li{
-    width: 80%;
-  }
+.sidebarItem{
+  width: 80%;
+  padding: 0.7rem 0.5rem;
+}
   .dashWrap{
     width: 100%;
     margin-top:20vh;
+  }
+  .dashForm{
+    width:auto;
   }
 }
