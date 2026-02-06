@@ -8,7 +8,10 @@ import { numContext } from '@/app/(admin)/Admin/page'
 import Theme_handler from './Theme_handler'
 
 const Admin_Shower = () => {
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
+
+  
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
+
 
   const router=useRouter()
   let [art,setArt]=useState([])
@@ -39,7 +42,7 @@ setSearch(art)
 }
 f()
 const stats=async()=>{
-const res =await fetch(`${BASE_URL}/api/statsManager`, {
+const res =await fetch(`http://localhost:3000/api/statsManager`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
