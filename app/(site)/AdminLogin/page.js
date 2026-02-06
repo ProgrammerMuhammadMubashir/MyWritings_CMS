@@ -6,7 +6,7 @@ import { notFound, useRouter } from "next/navigation";
 import ThemeAndFont from "@/components/ThemeAndFont"
 export default function AdminLogin() {
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || ""
 
 
   
