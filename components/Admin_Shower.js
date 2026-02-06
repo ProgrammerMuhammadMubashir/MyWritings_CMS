@@ -8,10 +8,7 @@ import { numContext } from '@/app/(admin)/Admin/page'
 import Theme_handler from './Theme_handler'
 
 const Admin_Shower = () => {
-
-  
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
-
+const BASE_URL =process.env.NEXT_PUBLIC_API_URL || ""
 
   const router=useRouter()
   let [art,setArt]=useState([])
