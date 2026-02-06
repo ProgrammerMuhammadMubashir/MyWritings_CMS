@@ -17,7 +17,7 @@ let updateArticle=await collectionArticles.updateOne({slug:article.slug},{$push:
 const updatedDoc = await collectionStats.findOneAndUpdate(
   {}, 
   { $inc: { Engage: 0.2 , PV: 1}  }, 
-  { new: true } // Returns the document after the update
+  { new: true } 
 );
  return NextResponse.json({msg:"Comment posted"})
  
