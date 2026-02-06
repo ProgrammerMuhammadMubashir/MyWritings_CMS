@@ -4,8 +4,9 @@ export default async function Page({ params }) {
     const { slug } = await params
     let data;
   try{
+    const BASE_URL = process.env.NEXT_PUBLIC_API_URL || ""
     let body={slug:slug}
-    const res =await fetch(`http://localhost:3000/api/articlePoster/Updater`, {
+    const res =await fetch(`${BASE_URL}/api/articlePoster/Updater`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
