@@ -2,7 +2,7 @@
 "use client"
 const ThemeAndFont =async () => {
  
-const BASE_URL =process.env.NEXT_PUBLIC_API_URL || ""
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 
    const res=await fetch(`${BASE_URL}/api/settingManager`, {
             method: 'POST',

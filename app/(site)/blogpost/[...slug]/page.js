@@ -5,7 +5,7 @@ import ArticlesPresenter from "@/components/ArticlesPresenter"
 import SelfArticle from "@/components/SelfArticle" 
 import ArticlePresenter_Self from "@/components/ArticlePresenter_Self";
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
+const BASE_URL = process.env.NEXT_PUBLIC_API_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000');
 
 export default async function Page({ params }) {
   let data;
